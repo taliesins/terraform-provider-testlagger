@@ -46,21 +46,22 @@ func (p *TestLaggerProvider) Metadata(ctx context.Context, req provider.Metadata
 
 func (p *TestLaggerProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		MarkdownDescription: "A provider for testing the dependency graph and execution engine.",
 		Attributes: map[string]schema.Attribute{
 			"client_initialize_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before client is created",
+				MarkdownDescription: "Amount of time in milliseconds to delay before client is created",
 				Optional:            true,
 			},
 			"datasource_configure_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before datasource configure function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before datasource configure function returns",
 				Optional:            true,
 			},
 			"resource_configure_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before resource configure function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before resource configure function returns",
 				Optional:            true,
 			},
 			"resource_import_state_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before resource import state function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before resource import state function returns",
 				Optional:            true,
 			},
 		},

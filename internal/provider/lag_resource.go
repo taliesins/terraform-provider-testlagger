@@ -40,27 +40,26 @@ func (r *LagResource) Metadata(ctx context.Context, req resource.MetadataRequest
 
 func (r *LagResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		MarkdownDescription: "Returns the given input after a delay.",
-
+		MarkdownDescription: "Echos the given input after a delay.",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				MarkdownDescription: "Unique identifier",
 				Computed:            true,
 			},
 			"create_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before create function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before create function returns",
 				Optional:            true,
 			},
 			"read_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before read function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before read function returns",
 				Optional:            true,
 			},
 			"update_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before update function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before update function returns",
 				Optional:            true,
 			},
 			"delete_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before delete function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before delete function returns",
 				Optional:            true,
 			},
 			"input": schema.StringAttribute{

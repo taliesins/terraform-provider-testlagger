@@ -32,12 +32,12 @@ func (r LagFunction) Metadata(_ context.Context, req function.MetadataRequest, r
 func (r LagFunction) Definition(_ context.Context, _ function.DefinitionRequest, resp *function.DefinitionResponse) {
 	resp.Definition = function.Definition{
 		Summary:             "Lag function",
-		MarkdownDescription: "Echoes given argument as result after waiting a defined amount of time.",
+		MarkdownDescription: "Echos the given input after a delay.",
 		Parameters: []function.Parameter{
 			function.Int64Parameter{
 				AllowUnknownValues:  false,
 				AllowNullValue:      false,
-				MarkdownDescription: "Amount of time to delay before function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before function returns",
 				Name:                "delay",
 			},
 			function.StringParameter{

@@ -35,10 +35,10 @@ func (d *LagDataSource) Metadata(ctx context.Context, req datasource.MetadataReq
 
 func (d *LagDataSource) Schema(ctx context.Context, req datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		Description: "Returns the given input after a delay.",
+		MarkdownDescription: "Echos the given input after a delay.",
 		Attributes: map[string]schema.Attribute{
 			"read_delay": schema.Int64Attribute{
-				MarkdownDescription: "Amount of time to delay before read function returns",
+				MarkdownDescription: "Amount of time in milliseconds to delay before read function returns",
 				Optional:            true,
 			},
 			"input": schema.StringAttribute{
