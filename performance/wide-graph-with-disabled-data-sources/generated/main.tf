@@ -1,0 +1,10 @@
+module "module-1" { source = "../submodule" }
+module "module-2" { source = "../submodule" }
+module "module-3" { source = "../submodule" }
+module "module-4" { source = "../submodule" }
+module "module-5" { source = "../submodule" }
+module "module-6" { source = "../submodule" }
+module "module-7" { source = "../submodule" }
+module "module-8" { source = "../submodule" }
+module "module-9" { source = "../submodule" }
+module "module-10" { source = "../submodule" }
